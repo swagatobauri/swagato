@@ -19,7 +19,7 @@ export function ProjectsSection() {
   };
 
   return (
-    <section id="work" className="w-full py-20 px-gutter bg-background border-t border-border/50">
+    <section id="work" className="w-full pt-20 pb-10 px-gutter bg-background border-t border-border/50">
       <div className="w-full max-w-[1600px] mx-auto flex flex-col xl:flex-row gap-12 xl:gap-20 items-center xl:items-stretch overflow-visible">
         
         {/* Left Sticky Header */}
@@ -56,7 +56,7 @@ export function ProjectsSection() {
           ref={scrollRef} 
           className="flex-1 flex gap-6 overflow-x-auto snap-x snap-mandatory custom-scrollbar pb-8 pt-4 -mx-gutter px-gutter xl:mx-0 xl:px-0 w-[calc(100%+2*var(--gutter))] xl:w-auto"
         >
-          {projectsData.map((project: Project, index: number) => {
+          {projectsData.filter(p => p.featured).map((project: Project, index: number) => {
             // Using a distinct purple or extracting unique colors per project. 
             // The user screenshot showed vibrant purple cards.
             const isPurple = index % 2 === 0;

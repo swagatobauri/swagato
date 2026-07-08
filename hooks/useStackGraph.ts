@@ -43,14 +43,21 @@ export function useStackGraph({ initialNodes, initialLinks, width, height, enabl
     linksRef.current = initialLinks.map(d => ({ ...d }));
 
     const simulation = d3.forceSimulation<TechNode>(nodesRef.current)
-      .force('link', d3.forceLink<TechNode, TechLink>(linksRef.current).id(d => d.id).distance(120))
-      .force('charge', d3.forceManyBody().strength(-300))
+      .force('link', d3.forceLink<TechNode, TechLink>(linksRef.current).id(d => d.id).distance(140))
+      .force('charge', d3.forceManyBody().strength(-400))
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force('collide', d3.forceCollide().radius(60))
       .alphaDecay(0.02) // Slower decay = longer gentle movement
       .velocityDecay(0.4); // More drag = less bouncy, more restrained
 
     simulation.on('tick', () => {
+      // Constrain nodes to bounds
+      const padding = 60;
+      nodesRef.current.forEach(node => {
+        if (node.x !== undefined) node.x = Math.max(padding, Math.min(width - padding, node.x));
+        if (node.y !== undefined) node.y = Math.max(padding, Math.min(height - padding, node.y));
+      });
+      
       // Create new arrays so React detects the change
       setNodes([...nodesRef.current]);
       setLinks([...linksRef.current]);

@@ -115,7 +115,7 @@ export default function RoleDetailPage({ params }: { params: { role: string } })
 
               <div className="flex flex-col gap-4 pt-6 border-t border-border">
                 <a 
-                  href="mailto:hello@example.com?subject=Inquiry: {roleData.name}"
+                  href={`mailto:swagato731123@gmail.com?subject=Inquiry: ${roleData.name}`}
                   className="w-full py-4 bg-foreground text-background font-bold text-bodySm rounded-sm flex items-center justify-center gap-2 hover:bg-accent hover:text-foreground transition-colors"
                 >
                   <Mail className="w-4 h-4" />

@@ -14,10 +14,13 @@ import {
   Code2, 
   Globe, 
   MessageSquare,
+  Code,
+  Mail,
   Menu,
   X,
   ChevronsLeft,
   Sun,
+  Moon,
   Circle,
   ArrowUpRight
 } from 'lucide-react';
@@ -33,16 +36,34 @@ const ICON_MAP: Record<string, React.ElementType> = {
   Code2,
   Globe,
   MessageSquare,
+  Code,
+  Mail,
 };
 
 export function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    // Check initial state from HTML tag which was set by our layout script
+    if (document.documentElement.classList.contains('dark')) {
+      setIsDark(true);
+    }
+  }, []);
 
-
-  return (
+  const toggleTheme = () => {
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      localStorage.theme = 'light';
+      setIsDark(false);
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.theme = 'dark';
+      setIsDark(true);
+    }
+  };  return (
     <React.Fragment>
       {/* Mobile Hamburger Trigger */}
       <button 
@@ -102,12 +123,14 @@ export function Sidebar() {
             <ChevronsLeft className={clsx("w-5 h-5 transition-transform duration-300", isCollapsed && "rotate-180")} />
           </button>
           
-          {/* Light/Dark Toggle Placeholder */}
+          {/* Light/Dark Toggle */}
           <button 
+            onClick={toggleTheme}
             className="w-8 h-8 flex items-center justify-center rounded-sm hover:bg-muted/10 text-muted hover:text-foreground transition-colors shrink-0"
-            title="Light Mode (Dark coming soon)"
+            title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            aria-label="Toggle Theme"
           >
-            <Sun className="w-4 h-4" />
+            {isDark ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
           </button>
         </div>
       </div>

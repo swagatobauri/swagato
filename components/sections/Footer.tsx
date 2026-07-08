@@ -28,22 +28,6 @@ export function Footer() {
         { y: 0, opacity: 1, stagger: 0.1, duration: 0.6, ease: 'power2.out' }
       );
 
-      // 2. Draw signature SVG
-      const signaturePath = document.querySelector('.signature-path') as SVGPathElement;
-      if (signaturePath) {
-        const length = signaturePath.getTotalLength();
-        gsap.set(signaturePath, { strokeDasharray: length, strokeDashoffset: length });
-        tl.to(signaturePath, { strokeDashoffset: 0, duration: 1.5, ease: 'power2.inOut' }, '-=0.4');
-      }
-
-      // 3. Stagger status pills
-      tl.fromTo('.status-row',
-        { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: 0.6 },
-        '-=1'
-      );
-
-
       // 5. Reveal massive wordmark
       tl.fromTo('.massive-wordmark',
         { opacity: 0, y: 40 },
@@ -68,7 +52,7 @@ export function Footer() {
   };
 
   return (
-    <footer ref={containerRef} className="w-full min-h-screen bg-background text-foreground flex flex-col justify-between pt-48 md:pt-[30vh] overflow-hidden relative"
+    <footer ref={containerRef} className="w-full bg-background text-foreground flex flex-col justify-between pt-16 md:pt-24 overflow-hidden relative"
       style={{ backgroundImage: 'radial-gradient(var(--border) 1px, transparent 1px)', backgroundSize: '32px 32px' }}
     >
       
@@ -78,42 +62,17 @@ export function Footer() {
       <div className="grid-container px-gutter w-full max-w-7xl mx-auto flex-1 flex flex-col relative z-10">
         
         {/* === ZONE 1: TOP ROW === */}
-        <div className="w-full flex flex-col md:flex-row justify-between items-end mb-24 gap-16 md:gap-0 mt-[40vh]">
+        <div className="w-full flex flex-col md:flex-row justify-between items-end mb-16 gap-16 md:gap-0 mt-8">
           
           {/* Left: Email */}
           <div className="flex flex-col gap-4 font-mono text-bodySm tracking-tight">
               <a 
-                href="mailto:hello@swagato.com"
+                href="mailto:swagato731123@gmail.com"
                 className="footer-link group flex items-center gap-2 w-max text-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-4 focus-visible:ring-offset-background rounded-sm transition-colors duration-300 relative"
               >
-                <span>hello@swagato.com</span>
+                <span>swagato731123@gmail.com</span>
                 <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-accent group-hover:w-full transition-all duration-300" />
               </a>
-          </div>
-
-          {/* Right: Signature Wordmark */}
-          <div className="hidden md:block">
-            <svg 
-              className="w-48 h-auto stroke-foreground fill-none opacity-80" 
-              viewBox="0 0 200 80"
-              style={{ strokeWidth: 1.5, strokeLinecap: 'round', strokeLinejoin: 'round' }}
-            >
-              {/* Abstract handwritten loop mimicking an "S.B" signature */}
-              <path className="signature-path" d="M 20 60 C 10 30, 40 10, 60 20 C 80 30, 30 70, 70 60 C 110 50, 100 20, 130 30 C 160 40, 120 70, 180 50" />
-            </svg>
-          </div>
-        </div>
-
-
-        {/* === ZONE 2: STATUS ROW === */}
-        <div className="w-full flex justify-start md:justify-end mb-32 status-row">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12 font-mono text-bodySm tracking-tight">
-            <div className="flex items-center gap-3">
-              <span className="w-2.5 h-2.5 rounded-full bg-accent animate-pulse"></span>
-              Open to work
-            </div>
-            <div>Based in Bengaluru</div>
-            <div>{time || 'Syncing...'}</div>
           </div>
         </div>
 

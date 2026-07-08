@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { useLocalTime } from '@/hooks/useLocalTime';
 import { StatusPill } from '@/components/ui/StatusPill';
+import Link from 'next/link';
 import { ArrowRight, FileText } from 'lucide-react';
 
 export function HeroSection() {
@@ -103,16 +104,18 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-            <a 
-              href="#projects" 
+            <Link 
+              href="/projects" 
               className="group relative flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-accent text-background font-heading font-bold text-bodySm uppercase tracking-wider rounded-sm overflow-hidden transition-transform hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>View Work</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
+            </Link>
             
             <a 
-              href="#resume" 
+              href="https://my.newtonschool.co/template/user/swagato731123/resume/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 border border-border text-foreground font-heading font-bold text-bodySm uppercase tracking-wider rounded-sm overflow-hidden transition-all hover:border-foreground hover:bg-muted/5 active:scale-[0.98]"
             >
               <span>Read Resume</span>

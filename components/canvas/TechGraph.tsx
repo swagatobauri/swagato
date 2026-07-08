@@ -213,33 +213,28 @@ export function TechGraph({ initialNodes, initialLinks }: TechGraphProps) {
                     setTooltip(t => ({ ...t, visible: false }));
                   }}
                 >
-                  {/* Node Panel */}
-                  <rect 
-                    x="-40" 
+                  {/* Node Panel via foreignObject for flexible HTML layout */}
+                  <foreignObject 
+                    x="-75" 
                     y="-20" 
-                    width="80" 
-                    height="40" 
-                    rx="20" // Fully rounded pill to match design system
-                    className="fill-background stroke-border stroke-[1.5px]"
-                  />
-                  {node.iconPath ? (
-                    <g transform="translate(-10, -10)">
-                      <svg width="20" height="20" viewBox="0 0 24 24">
-                        <path 
-                          d={node.iconPath} 
-                          fill={node.iconHex || 'var(--foreground)'}
-                        />
-                      </svg>
-                    </g>
-                  ) : (
-                    <text 
-                      textAnchor="middle" 
-                      dy=".3em" 
-                      className="font-heading font-semibold text-[14px] fill-foreground select-none pointer-events-none"
-                    >
-                      {node.label}
-                    </text>
-                  )}
+                    width="150" 
+                    height="40"
+                    className="overflow-visible"
+                  >
+                    <div className="w-full h-full flex items-center justify-center pointer-events-none">
+                       <div className="bg-background border-[1.5px] border-border rounded-full px-4 py-1.5 flex items-center justify-center max-w-full shadow-sm pointer-events-auto">
+                           {node.iconPath ? (
+                              <svg width="18" height="18" viewBox="0 0 24 24">
+                                <path d={node.iconPath} fill={node.iconHex || 'var(--foreground)'} />
+                              </svg>
+                           ) : (
+                              <span className="font-heading font-semibold text-[13px] text-foreground whitespace-nowrap overflow-hidden text-ellipsis">
+                                {node.label}
+                              </span>
+                           )}
+                       </div>
+                    </div>
+                  </foreignObject>
                 </g>
               );
             })}

@@ -14,15 +14,16 @@
     --border: 235 225 216;     /* #EBE1D8 */
   }
 
-  .theme-inverted {
-    --background: 42 35 30;    /* #2A231E */
-    --foreground: 250 247 245; /* #FAF7F5 */
-    --card: 63 53 46;          /* #3F352E */
-    --accent: 199 95 113;      /* #C75F71 */
-    --accent-secondary: 240 184 184; /* #F0B8B8 */
-    --accent-tertiary: 162 174 157;  /* #A2AE9D */
-    --muted: 138 123 110;      /* #8A7B6E */
-    --border: 63 53 46;        /* #3F352E */
+  .dark {
+    /* Premium Monochrome + Muted Rose Accent */
+    --background: 10 10 10;      /* #0A0A0A */
+    --foreground: 237 237 237;   /* #EDEDED */
+    --card: 19 19 19;            /* #131313 */
+    --accent: 212 139 147;       /* #D48B93 (Accent rare) */
+    --accent-secondary: 138 138 138; /* #8A8A8A (Text secondary) */
+    --accent-tertiary: 110 110 110;
+    --muted: 110 110 110;        /* #6E6E6E (Text muted) */
+    --border: 42 42 42;          /* #2A2A2A (Border) */
   }
 
   body {

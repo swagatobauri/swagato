@@ -104,9 +104,8 @@ export function Sidebar() {
       {/* 1. Profile Block */}
       <div className="p-6 border-b border-border flex items-center justify-between">
         <div className={clsx("flex items-center gap-4 transition-opacity duration-300", isCollapsed ? "opacity-0 w-0 overflow-hidden" : "opacity-100")}>
-          <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
-            {/* Placeholder Avatar */}
-            <User className="w-6 h-6 text-muted-foreground" />
+          <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0 overflow-hidden border border-border">
+            <img src="/profile.jpg" alt="Profile Picture" className="w-full h-full object-cover" />
           </div>
           <div className="flex flex-col">
             <span className="font-heading font-bold text-foreground leading-none">Swagato Bauri</span>

@@ -16,120 +16,195 @@ export type Service = {
   isCustomQuote: boolean;
   bookLink: string;
   faqs: ServiceFAQ[];
+  featured?: boolean;
 };
 
 export const SERVICES: Service[] = [
   {
-    id: 'ai-rag-systems',
-    abbr: 'AI',
-    title: 'AI & RAG Systems',
-    subtitle: 'LLMs • RAG • Intelligent Agents',
-    shortDescription: 'Custom Large Language Model integrations, retrieval-augmented generation pipelines, and intelligent agents.',
+    id: 'saas-development',
+    abbr: 'SA',
+    title: 'SaaS Development',
+    subtitle: 'SaaS • Web App • Scaling',
+    shortDescription: 'Crafting scalable SaaS platforms with cutting-edge features, ensuring seamless performance and an exceptional user experience.',
     detailedDescription: [
-      "I build custom AI solutions that connect foundation models to your proprietary data. Instead of generic chatbots, I engineer robust Retrieval-Augmented Generation (RAG) pipelines that drastically reduce hallucinations and provide accurate, context-aware answers.",
-      "From setting up optimized vector databases to orchestrating complex agent workflows with LangChain or LlamaIndex, I ensure your AI features are scalable, fast, and secure."
+      "I specialize in building scalable SaaS platforms that combine advanced features with seamless performance and intuitive user experiences. From architecture to deployment, I ensure your product is robust, secure, and ready for growth, helping you deliver value to users and stand out in a competitive market.",
+      "By utilizing modern tech stacks and cloud infrastructure, I build multi-tenant platforms capable of handling high traffic and complex workflows without compromising speed."
     ],
     features: [
-      'Vector Database Setup (Pinecone, Qdrant, etc.)',
-      'LLM Orchestration & Agentic Workflows',
-      'Semantic Search Integration',
-      'Prompt Engineering & Evaluation',
-      'Fine-tuning & RAG pipeline optimization',
-      'Production Deployment'
+      'End-to-end SaaS product development',
+      'Product-market fit focus',
+      'Fast MVP delivery',
+      'Automated database backup and recovery',
+      'Seamless scaling for growth',
+      'Cross-platform (web & mobile) delivery'
     ],
-    moreCount: 0,
-    price: '$2,000+',
+    moreCount: 3,
+    price: '$1000',
     isCustomQuote: false,
-    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20AI%20&%20RAG%20Systems',
+    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20SaaS%20Development',
+    featured: true,
     faqs: [
       {
-        question: 'Which LLMs do you work with?',
-        answer: 'I work with OpenAI (GPT-4), Anthropic (Claude 3), and open-source models via Groq or local deployment (Llama 3, Mistral) depending on your privacy, cost, and latency requirements.'
+        question: 'What makes your SaaS development process stand out?',
+        answer: 'I focus heavily on architecture scalability and user retention loops from day one. I don\'t just write code; I help engineer a product that is designed to grow.'
       },
       {
-        question: 'How do you ensure my data is secure?',
-        answer: 'I can architect solutions that run entirely in your VPC, use private LLM endpoints, or leverage self-hosted open-source models so your proprietary data never leaves your infrastructure.'
-      },
-      {
-        question: 'How long does a typical AI integration take?',
-        answer: 'A standard RAG MVP can take 2-3 weeks, while complex agentic workflows and full platform integrations typically take 4-8 weeks.'
+        question: 'Do you handle the authentication and billing?',
+        answer: 'Yes, I fully integrate modern Auth providers (like Clerk or NextAuth) and payment processors (like Stripe) for seamless subscription management.'
       }
     ]
   },
   {
-    id: 'full-stack-development',
-    abbr: 'FS',
-    title: 'Full-Stack Development',
-    subtitle: 'SPA • MPA • Web App • Responsive • SEO',
-    shortDescription: 'End-to-end web application development using React, Next.js, and modern high-performance backends.',
+    id: 'custom-website-development',
+    abbr: 'WEB',
+    title: 'Custom Website Development',
+    subtitle: 'Responsive • Performant • Modern',
+    shortDescription: 'Building fast, responsive single and multi-page web applications tailored to your business needs, with modern design and robust performance.',
     detailedDescription: [
-      "I build modern, responsive web applications—from sleek one-page portfolios to fully-featured SaaS platforms and eCommerce stores. Each site is tailored to your brand and goals, featuring fast performance, a clean UI, and a smooth user experience across all devices.",
-      "My stack is heavily focused on the modern JavaScript/TypeScript ecosystem (React, Next.js, Node.js) combined with robust SQL databases, ensuring the applications I build are maintainable and easily scalable."
+      "Your website is your digital storefront. I build custom, high-performance websites that not only look stunning but are engineered to convert visitors into customers.",
+      "Using the latest web technologies like Next.js and Tailwind CSS, I ensure your site has lightning-fast load times, perfect SEO scores, and flawless mobile responsiveness."
     ],
     features: [
-      'Custom-built SPA/MPA using Next.js',
-      'Responsive and modern UI with Tailwind CSS',
-      'Optimized performance and Core Web Vitals',
+      'Custom-built SPA/MPA',
+      'Responsive and modern UI',
+      'Optimized performance',
       'SEO-friendly structure',
-      'API Design & Architecture (REST/GraphQL)',
-      'Database Modeling & Integration'
+      'CMS Integration'
+    ],
+    moreCount: 1,
+    price: '$200',
+    isCustomQuote: false,
+    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20Custom%20Website',
+    featured: true,
+    faqs: [
+      {
+        question: 'Will I be able to edit the content myself?',
+        answer: 'Absolutely. I can integrate headless CMS platforms like Sanity or Contentful so you can easily update text and images without touching code.'
+      },
+      {
+        question: 'Do you optimize for mobile?',
+        answer: 'Yes, every site is built mobile-first, ensuring it looks and works perfectly on any device size.'
+      }
+    ]
+  },
+  {
+    id: 'system-design',
+    abbr: 'SYS',
+    title: 'System Design',
+    subtitle: 'Architecture • Scalability • Cloud',
+    shortDescription: 'Designing robust, scalable system architectures and user flows that power reliable, high-performing applications.',
+    detailedDescription: [
+      "A great application requires a solid foundation. I design scalable, cloud-native system architectures that handle high concurrency, data integrity, and complex microservice orchestration.",
+      "From database schema design to event-driven architectures, I map out the technical blueprint required to ensure your application can scale securely and efficiently."
+    ],
+    features: [
+      'Scalable system architecture',
+      'Clear user flows',
+      'Optimized information structure',
+      'Database Modeling (SQL/NoSQL)',
+      'API Gateway & Microservices'
     ],
     moreCount: 2,
-    price: 'Custom',
-    isCustomQuote: true,
-    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20Full-Stack%20Development',
+    price: '$500',
+    isCustomQuote: false,
+    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20System%20Design',
+    featured: true,
     faqs: [
       {
-        question: 'Will my app be SEO-friendly and load fast?',
-        answer: 'Yes! By leveraging Next.js App Router, Server-Side Rendering (SSR), and Static Site Generation (SSG), I ensure optimal load times and perfect SEO scores out of the box.'
+        question: 'What deliverables are included in System Design?',
+        answer: 'You receive comprehensive architecture diagrams, database schemas, API specs, and a technical requirements document ready for implementation.'
       },
       {
-        question: 'Do you handle the backend and database too?',
-        answer: 'Absolutely. I design scalable database schemas (PostgreSQL, MySQL) and build secure REST or GraphQL APIs to power your frontend applications.'
-      },
-      {
-        question: 'Will my app be mobile-friendly?',
-        answer: 'Every application I build is designed mobile-first, ensuring a flawless and native-feeling experience on phones, tablets, and desktops.'
+        question: 'Can you review an existing architecture?',
+        answer: 'Yes, I can audit your current system to identify bottlenecks and design a migration plan to a more scalable architecture.'
       }
     ]
   },
   {
-    id: 'performance-audits',
-    abbr: 'PO',
-    title: 'Performance Audits',
-    subtitle: 'Latency • Core Web Vitals • Bottlenecks',
-    shortDescription: 'Deep-dive technical audits to identify bottlenecks, optimize latency, and reduce infrastructure costs.',
+    id: 'payment-gateway',
+    abbr: 'PA',
+    title: 'Payment Gateway Integration',
+    subtitle: 'Stripe • Razorpay • Subscriptions',
+    shortDescription: 'Integrating secure and reliable payment gateways like Stripe and Razorpay into websites and web applications.',
     detailedDescription: [
-      "Slow applications kill conversions and skyrocket infrastructure costs. I conduct comprehensive technical audits of your existing codebase and infrastructure to identify exactly what's slowing you down.",
-      "You'll receive a detailed, actionable report highlighting database query inefficiencies, massive JavaScript bundles, unoptimized rendering paths, and memory leaks, along with the exact code required to fix them."
+      "Stop losing revenue to failed transactions. I implement robust, secure, and PCI-compliant payment gateways into your existing web applications.",
+      "Whether you need simple one-time checkouts, complex recurring billing cycles, or global multi-currency support, I ensure the checkout flow is frictionless for your customers."
     ],
     features: [
-      'Core Web Vitals & Lighthouse Audit',
-      'Database Query Profiling & Optimization',
-      'Bundle Size Analysis & Reduction',
-      'Memory Leak Detection',
-      'Infrastructure Cost Optimization',
-      'Actionable Technical Report'
+      'Stripe and Razorpay integration',
+      'One-time and recurring payments',
+      'Subscription management',
+      'Webhook handling',
+      'Failed payment recovery logic'
     ],
-    moreCount: 0,
-    price: '$500',
+    moreCount: 4,
+    price: '$300',
     isCustomQuote: false,
-    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20Performance%20Audits',
+    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20Payment%20Gateway',
+    featured: false,
     faqs: [
       {
-        question: 'What do I get at the end of the audit?',
-        answer: 'You will receive a comprehensive PDF report detailing the bottlenecks found, their business impact, and step-by-step technical instructions (including code snippets) on how to resolve them.'
-      },
-      {
-        question: 'Can you implement the fixes too?',
-        answer: 'Yes! After the audit, if you do not have the in-house capacity to execute the fixes, you can hire me to implement the optimizations directly.'
-      },
-      {
-        question: 'How long does an audit take?',
-        answer: 'A standard audit takes 3-5 business days depending on the size and complexity of your application.'
+        question: 'Do you handle the webhooks and security?',
+        answer: 'Yes, I implement robust backend webhook listeners to ensure your database stays perfectly in sync with Stripe/Razorpay.'
       }
     ]
-  }
+  },
+  {
+    id: 'landing-page-design',
+    abbr: 'LPD',
+    title: 'Landing Page Design',
+    subtitle: 'Conversion • UI/UX • Design Laws',
+    shortDescription: 'Designing landing pages that combine design laws, current trends, and conversion-focused strategies to maximize engagement.',
+    detailedDescription: [
+      "A beautiful page isn't enough; it needs to convert. I design high-converting landing pages using established design principles (Fitts's Law, Hick's Law) and persuasive visual hierarchies.",
+      "By combining modern UI trends with proven psychological design laws, I craft pages that guide user attention directly to your primary call-to-action."
+    ],
+    features: [
+      'Conversion-optimized layouts',
+      'Application of design laws (Fitts, Hick, Gestalt, etc.)',
+      'Trend-aware visual design',
+      'A/B Testing setup ready'
+    ],
+    moreCount: 2,
+    price: '$100',
+    isCustomQuote: false,
+    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20Landing%20Page',
+    featured: false,
+    faqs: [
+      {
+        question: 'Does this include the development of the page?',
+        answer: 'This service is primarily for the UI/UX design (Figma). However, I can bundle development for an additional cost.'
+      }
+    ]
+  },
+  {
+    id: 'ai-tool-development',
+    abbr: 'AI',
+    title: 'AI Tool Development',
+    subtitle: 'LLMs • RAG • Custom Models',
+    shortDescription: 'Building AI/ML-powered SaaS products, specializing in training custom models and prompt engineering.',
+    detailedDescription: [
+      "Leverage the power of Artificial Intelligence to automate workflows and unlock new capabilities. I build custom AI tools, ranging from internal automation scripts to full-fledged AI SaaS products.",
+      "Specializing in RAG (Retrieval-Augmented Generation) pipelines, I can securely connect state-of-the-art LLMs (like GPT-4 or Claude 3) to your proprietary business data."
+    ],
+    features: [
+      'Custom AI/ML model training',
+      'Prompt engineering for LLMs',
+      'Big data mining and analysis',
+      'Vector Database integration'
+    ],
+    moreCount: 2,
+    price: '$3000',
+    isCustomQuote: false,
+    bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20AI%20Tool',
+    featured: false,
+    faqs: [
+      {
+        question: 'Can the AI use my private company data safely?',
+        answer: 'Yes. By using secure API endpoints and dedicated vector databases, your proprietary data is never used to train public models.'
+      }
+    ]
+  },
 ];
 
 export function getServiceById(id: string): Service | undefined {

@@ -35,23 +35,20 @@ export default function ServiceDetailPage({ params }: { params: { service: strin
         {/* Main Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mt-4">
           
-          {/* Left Column: Details & FAQs */}
-          <div className="col-span-1 lg:col-span-8 flex flex-col gap-16">
+          {/* Left Column: Image, Details & FAQs */}
+          <div className="col-span-1 lg:col-span-8 flex flex-col gap-12">
             
-            {/* Visual Header Card */}
-            <div className="w-full h-48 md:h-64 rounded-2xl bg-gradient-to-br from-accent-secondary/10 to-accent-secondary/30 flex items-center justify-center overflow-hidden relative">
-              <h1 className="relative z-10 font-heading text-h3 md:text-h2 font-black text-foreground tracking-tight text-center px-4 max-w-2xl">
+            {/* Visual Header Card (Like an Image/Cover) */}
+            <div className="w-full h-64 md:h-80 rounded-2xl bg-gradient-to-br from-accent-secondary/10 to-accent/10 border border-border flex items-center justify-center overflow-hidden relative">
+              <h2 className="relative z-10 font-sans text-3xl md:text-4xl font-bold text-foreground tracking-tight text-center px-6 max-w-2xl">
                 {service.title}
-              </h1>
+              </h2>
             </div>
             
             {/* Detailed Description */}
             <section className="flex flex-col gap-6">
-              <p className="font-mono text-caption text-muted uppercase tracking-widest border-b border-border pb-4 mb-2">
-                {service.subtitle}
-              </p>
               {service.detailedDescription.map((paragraph, idx) => (
-                <p key={idx} className="text-bodyLg text-foreground/80 leading-relaxed max-w-3xl">
+                <p key={idx} className="text-bodyLg text-foreground/80 leading-relaxed max-w-4xl">
                   {paragraph}
                 </p>
               ))}
@@ -59,7 +56,7 @@ export default function ServiceDetailPage({ params }: { params: { service: strin
 
             {/* FAQs */}
             {service.faqs.length > 0 && (
-              <section className="flex flex-col gap-8">
+              <section className="flex flex-col gap-8 mt-4">
                 <h3 className="font-heading text-h3 font-bold text-foreground">
                   Frequently Asked Questions
                 </h3>
@@ -78,16 +75,26 @@ export default function ServiceDetailPage({ params }: { params: { service: strin
 
           </div>
 
-          {/* Right Column: Sticky Sidebar Contact Box & Benefits */}
+          {/* Right Column: Title, Subtitle, Pricing Box, Benefits */}
           <div className="col-span-1 lg:col-span-4 flex flex-col gap-8 lg:sticky lg:top-32">
             
+            {/* Header Text */}
+            <div className="flex flex-col gap-3">
+              <h1 className="font-sans text-3xl md:text-4xl font-bold text-foreground tracking-tight">
+                {service.title}
+              </h1>
+              <p className="text-bodySm font-medium text-muted-foreground leading-relaxed">
+                {service.subtitle}
+              </p>
+            </div>
+
             {/* Pricing Card */}
-            <div className="flex flex-col p-8 bg-card border border-border rounded-2xl shadow-sm gap-8">
-              <div className="flex flex-col gap-1">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-muted">
+            <div className="flex flex-col p-8 bg-card border border-border rounded-2xl shadow-sm gap-6">
+              <div className="flex flex-col gap-2">
+                <span className="text-bodySm font-medium text-muted-foreground">
                   Pricing
                 </span>
-                <p className="font-heading text-h2 font-bold text-foreground">
+                <p className="font-sans text-4xl font-bold text-foreground">
                   {service.price}
                 </p>
               </div>
@@ -95,7 +102,7 @@ export default function ServiceDetailPage({ params }: { params: { service: strin
               <div className="pt-2">
                 <a 
                   href={service.bookLink}
-                  className="w-full py-4 bg-foreground text-background font-bold text-bodySm rounded-sm flex items-center justify-center gap-2 hover:bg-accent hover:text-foreground transition-colors"
+                  className="w-full py-4 bg-foreground text-background font-bold text-bodySm rounded-lg flex items-center justify-center gap-2 hover:bg-accent hover:text-foreground transition-colors"
                 >
                   Book Now
                 </a>
@@ -103,8 +110,8 @@ export default function ServiceDetailPage({ params }: { params: { service: strin
             </div>
 
             {/* Key Benefits Checklist */}
-            <div className="flex flex-col gap-6 pt-4">
-              <h3 className="font-heading text-h4 font-bold text-foreground">
+            <div className="flex flex-col gap-6 pt-2">
+              <h3 className="font-sans text-xl font-bold text-foreground">
                 Key Benefits
               </h3>
               <ul className="flex flex-col gap-4">

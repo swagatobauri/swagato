@@ -33,12 +33,12 @@ export default function RoleDetailPage({ params }: { params: { role: string } })
         </div>
 
         {/* Large Visual Header Card */}
-        <div className="w-full h-48 md:h-64 rounded-2xl bg-gradient-to-br from-accent/5 to-accent/20 border border-border flex items-center justify-center overflow-hidden relative">
+        <div className="w-full h-36 sm:h-48 md:h-64 rounded-2xl bg-gradient-to-br from-accent/5 to-accent/20 border border-border flex items-center justify-center overflow-hidden relative">
           {/* Abstract geometric BG elements */}
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-background/40 blur-3xl rounded-full" />
           <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-accent/20 blur-3xl rounded-full" />
           
-          <h1 className="relative z-10 font-heading text-h2 md:text-[4rem] font-black text-foreground tracking-tight text-center px-4">
+          <h1 className="relative z-10 font-heading text-4xl md:text-[4rem] font-black text-foreground tracking-tight leading-tight text-center px-6">
             {roleData.name}
           </h1>
         </div>
@@ -50,11 +50,11 @@ export default function RoleDetailPage({ params }: { params: { role: string } })
           <div className="col-span-1 lg:col-span-8 flex flex-col gap-16">
             
             {/* Tagline & Description */}
-            <section className="flex flex-col gap-6">
-              <h2 className="font-heading text-h3 md:text-h2 font-bold text-foreground leading-tight">
+            <section className="flex flex-col gap-4 md:gap-6">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-h2 font-bold text-foreground leading-tight">
                 {roleData.tagline}
               </h2>
-              <p className="text-bodyLg text-foreground/80 leading-relaxed max-w-3xl">
+              <p className="text-base sm:text-lg md:text-bodyLg text-foreground/80 leading-relaxed max-w-3xl">
                 {roleData.description}
               </p>
             </section>

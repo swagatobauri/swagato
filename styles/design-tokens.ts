@@ -1,18 +1,22 @@
 export const tokens = {
   colors: {
     light: {
-      background: '#F4F1EA',
-      foreground: '#1A1A1A',
-      accent: '#E04D01', // Burnt orange - brings high-energy contrast to the calm paper background
-      muted: '#8A867D',
-      border: '#E2DFD8'
+      background: '#FAF7F5', // Soft warm off-white
+      foreground: '#54463A', // Dark brown
+      accent: '#C75F71',     // Deep rose (Primary accent)
+      accentSecondary: '#F0B8B8', // Blush pink (Secondary decorative)
+      accentTertiary: '#A2AE9D',  // Muted gray-green (Tertiary utility)
+      muted: '#8A7B6E',
+      border: '#EBE1D8'
     },
-    dark: {
-      background: '#1A1A1A',
-      foreground: '#F4F1EA',
-      accent: '#FF6B1A',
-      muted: '#A3A3A3',
-      border: '#333333'
+    dark: { // Note: Dark mode is not the primary focus for Pastel Garden, keeping a tinted inversion
+      background: '#2A231E',
+      foreground: '#FAF7F5',
+      accent: '#C75F71',
+      accentSecondary: '#F0B8B8',
+      accentTertiary: '#A2AE9D',
+      muted: '#8A7B6E',
+      border: '#3F352E'
     }
   },
   typography: {

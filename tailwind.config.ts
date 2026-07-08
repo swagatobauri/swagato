@@ -10,11 +10,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        accent: "var(--accent)",
-        muted: "var(--muted)",
-        border: "var(--border)",
+        background: "rgb(var(--background) / <alpha-value>)",
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
+        card: "rgb(var(--card) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
+        accentSecondary: "rgb(var(--accent-secondary) / <alpha-value>)",
+        accentTertiary: "rgb(var(--accent-tertiary) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-jakarta)", "sans-serif"],

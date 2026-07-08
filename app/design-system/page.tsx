@@ -18,8 +18,11 @@ export default function DesignSystem() {
               <h3 className="text-h4 font-sans font-medium">Light Theme (Default)</h3>
             </div>
             <ColorSwatch name="Background" variable="var(--background)" hex={tokens.colors.light.background} />
+            <ColorSwatch name="Card" variable="var(--card)" hex="#FFFFFF" />
             <ColorSwatch name="Foreground" variable="var(--foreground)" hex={tokens.colors.light.foreground} />
-            <ColorSwatch name="Accent" variable="var(--accent)" hex={tokens.colors.light.accent} />
+            <ColorSwatch name="Primary (Rose)" variable="var(--accent)" hex={tokens.colors.light.accent} />
+            <ColorSwatch name="Secondary (Blush)" variable="var(--accent-secondary)" hex={tokens.colors.light.accentSecondary} />
+            <ColorSwatch name="Tertiary (Green)" variable="var(--accent-tertiary)" hex={tokens.colors.light.accentTertiary} />
             <ColorSwatch name="Muted" variable="var(--muted)" hex={tokens.colors.light.muted} />
             <ColorSwatch name="Border" variable="var(--border)" hex={tokens.colors.light.border} />
           </div>
@@ -29,8 +32,11 @@ export default function DesignSystem() {
               <h3 className="text-h4 font-sans font-medium">Inverted Theme</h3>
             </div>
             <ColorSwatch name="Background" variable="var(--background)" hex={tokens.colors.dark.background} />
+            <ColorSwatch name="Card" variable="var(--card)" hex="#3F352E" />
             <ColorSwatch name="Foreground" variable="var(--foreground)" hex={tokens.colors.dark.foreground} />
-            <ColorSwatch name="Accent" variable="var(--accent)" hex={tokens.colors.dark.accent} />
+            <ColorSwatch name="Primary (Rose)" variable="var(--accent)" hex={tokens.colors.dark.accent} />
+            <ColorSwatch name="Secondary (Blush)" variable="var(--accent-secondary)" hex={tokens.colors.dark.accentSecondary} />
+            <ColorSwatch name="Tertiary (Green)" variable="var(--accent-tertiary)" hex={tokens.colors.dark.accentTertiary} />
             <ColorSwatch name="Muted" variable="var(--muted)" hex={tokens.colors.dark.muted} />
             <ColorSwatch name="Border" variable="var(--border)" hex={tokens.colors.dark.border} />
           </div>

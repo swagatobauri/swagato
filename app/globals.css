@@ -4,27 +4,43 @@
 
 @layer base {
   :root {
-    --background: #F4F1EA;
-    --foreground: #1A1A1A;
-    --accent: #E04D01;
-    --muted: #8A867D;
-    --border: #E2DFD8;
+    --background: 250 247 245; /* #FAF7F5 */
+    --foreground: 84 70 58;    /* #54463A */
+    --card: 255 255 255;       /* #FFFFFF */
+    --accent: 199 95 113;      /* #C75F71 */
+    --accent-secondary: 240 184 184; /* #F0B8B8 */
+    --accent-tertiary: 162 174 157;  /* #A2AE9D */
+    --muted: 138 123 110;      /* #8A7B6E */
+    --border: 235 225 216;     /* #EBE1D8 */
   }
 
   .theme-inverted {
-    --background: #1A1A1A;
-    --foreground: #F4F1EA;
-    --accent: #FF6B1A;
-    --muted: #A3A3A3;
-    --border: #333333;
+    --background: 42 35 30;    /* #2A231E */
+    --foreground: 250 247 245; /* #FAF7F5 */
+    --card: 63 53 46;          /* #3F352E */
+    --accent: 199 95 113;      /* #C75F71 */
+    --accent-secondary: 240 184 184; /* #F0B8B8 */
+    --accent-tertiary: 162 174 157;  /* #A2AE9D */
+    --muted: 138 123 110;      /* #8A7B6E */
+    --border: 63 53 46;        /* #3F352E */
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased transition-colors duration-500 ease-smooth;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
+  }
+
+  ::selection {
+    background-color: var(--accent-secondary);
+    color: #FFFFFF;
   }
 }
 
@@ -32,7 +48,7 @@
   .grid-container {
     @apply w-full max-w-screen-2xl mx-auto px-gutter;
   }
-  
+
   .grid-12 {
     @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-gutter;
   }

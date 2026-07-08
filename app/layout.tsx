@@ -5,6 +5,7 @@ import './globals.css';
 import { SmoothScroll } from '@/components/ui/SmoothScroll';
 import { Sidebar } from '@/components/ui/Sidebar';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
+import { VisitorTracker } from "@/components/VisitorTracker";
 
 const syne = Syne({
   subsets: ['latin'],
@@ -50,6 +51,7 @@ export default function RootLayout({
         }} />
       </head>
       <body className={`${syne.variable} ${plusJakartaSans.variable} ${geistMono.variable} overflow-x-hidden`}>
+        <VisitorTracker />
         <div className="flex w-full min-h-screen">
           <Sidebar />
           <main className="flex-1 flex flex-col min-w-0 relative">

@@ -65,6 +65,16 @@ export function Sidebar() {
     }
   };  return (
     <React.Fragment>
+      {/* Mobile Theme Toggle */}
+      <button 
+        onClick={toggleTheme}
+        className="md:hidden fixed top-6 left-6 z-[60] w-12 h-12 flex items-center justify-center bg-background/80 backdrop-blur-md border border-border rounded-full text-foreground shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-transform hover:scale-105 active:scale-95"
+        title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        aria-label="Toggle Theme"
+      >
+        {isDark ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+      </button>
+
       {/* Mobile Hamburger Trigger */}
       <button 
         onClick={() => setIsMobileOpen(true)}

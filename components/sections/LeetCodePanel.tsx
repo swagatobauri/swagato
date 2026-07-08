@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowUpRight, Trophy, Code2, Medal } from 'lucide-react';
+import { ArrowUpRight, Trophy, Code2 } from 'lucide-react';
 import clsx from 'clsx';
 
 // Types for the detailed API response
@@ -60,7 +60,7 @@ export function LeetCodePanel() {
     startDate.setDate(today.getDate() - (today.getDay()) - ((WEEKS_TO_SHOW - 1) * 7));
     startDate.setHours(0, 0, 0, 0);
 
-    let currentDate = new Date(startDate);
+    const currentDate = new Date(startDate);
     
     // Parse calendar safely
     const calendarEntries = data?.calendar ? Object.entries(data.calendar) : [];

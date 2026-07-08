@@ -138,7 +138,7 @@ export function Sidebar() {
       {/* 2 & 3. Nav Groups */}
       <nav className="flex-1 py-6 flex flex-col gap-8">
         
-        {MENU_GROUPS.map((group, groupIdx) => {
+        {MENU_GROUPS.map((group) => {
           // Identify if this is the "Connect" group which holds the Resume
           const isConnectGroup = group.title === 'Connect';
           const regularItems = isConnectGroup ? group.items.filter(i => i.id !== 'resume') : group.items;

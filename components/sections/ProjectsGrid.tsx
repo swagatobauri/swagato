@@ -43,7 +43,7 @@ export function ProjectsGrid() {
             Projects
           </h1>
           <p className="font-sans text-bodyLg text-muted max-w-xl">
-            A deep dive into the systems, applications, and experiments I've built.
+            A deep dive into the systems, applications, and experiments I&apos;ve built.
           </p>
         </div>
 

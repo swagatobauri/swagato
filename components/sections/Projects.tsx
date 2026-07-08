@@ -29,7 +29,7 @@ export function ProjectsSection() {
               Recent<br className="hidden xl:block" /> Projects
             </h2>
             <p className="text-muted text-lg mt-6 max-w-md">
-              A few things I've built recently.
+              A few things I&apos;ve built recently.
             </p>
           </div>
           

@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable @next/next/no-img-element */
 
 import { useState } from 'react';
 import { Camera, Music, Award, Play, Pause, X, ShieldCheck, FileText } from 'lucide-react';
@@ -27,7 +28,7 @@ export function BeyondTheCodeBento() {
       <div className="font-mono text-[10px] sm:text-caption text-muted flex items-center gap-4">
         <span>[ human.log ]</span>
         <span className="flex-1 h-[1px] bg-border/50" />
-        <span className="uppercase tracking-widest">// Beyond the Code</span>
+        <span className="uppercase tracking-widest">{`// Beyond the Code`}</span>
       </div>
 
       {/* Bento Grid */}

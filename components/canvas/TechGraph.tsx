@@ -163,8 +163,6 @@ export function TechGraph({ initialNodes, initialLinks }: TechGraphProps) {
               if (!source || !target) return null;
 
               const active = isLinkActive(link);
-              const dx = target.x! - source.x!;
-              const dy = target.y! - source.y!;
               
               // We render edges as paths to support curved lines or simple straight lines. Straight line for simplicity and "circuit" feel.
               const d = `M ${source.x} ${source.y} L ${target.x} ${target.y}`;

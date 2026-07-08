@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { StatusPill } from '@/components/ui/StatusPill';
 import { MENU_GROUPS } from '@/lib/nav-links-data';
 
 export function Footer() {

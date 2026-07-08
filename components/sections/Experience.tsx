@@ -36,7 +36,7 @@ export function ExperienceSection() {
       });
 
       // Stagger reveal the rows
-      rows.forEach((row: any, i) => {
+      rows.forEach((row: Element) => {
         const dot = row.querySelector('.timeline-dot');
         const content = row.querySelector('.timeline-content');
         

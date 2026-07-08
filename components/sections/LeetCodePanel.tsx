@@ -180,19 +180,19 @@ export function LeetCodePanel() {
                 <div className="flex flex-col p-2 rounded-lg bg-[#383838]/50">
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-[#00b8a3] font-medium">Easy</span>
-                    <span className="text-white/80 font-mono">{data.stats.solved.easy}<span className="text-white/30 text-[10px]">/{data.stats.total.easy}</span></span>
+                    <span className="text-white/80 font-mono">{data?.stats?.solved?.easy || 0}<span className="text-white/30 text-[10px]">/{data?.stats?.total?.easy || 0}</span></span>
                   </div>
                 </div>
                 <div className="flex flex-col p-2 rounded-lg bg-[#383838]/50">
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-[#ffc01e] font-medium">Med.</span>
-                    <span className="text-white/80 font-mono">{data.stats.solved.medium}<span className="text-white/30 text-[10px]">/{data.stats.total.medium}</span></span>
+                    <span className="text-white/80 font-mono">{data?.stats?.solved?.medium || 0}<span className="text-white/30 text-[10px]">/{data?.stats?.total?.medium || 0}</span></span>
                   </div>
                 </div>
                 <div className="flex flex-col p-2 rounded-lg bg-[#383838]/50">
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-[#ff375f] font-medium">Hard</span>
-                    <span className="text-white/80 font-mono">{data.stats.solved.hard}<span className="text-white/30 text-[10px]">/{data.stats.total.hard}</span></span>
+                    <span className="text-white/80 font-mono">{data?.stats?.solved?.hard || 0}<span className="text-white/30 text-[10px]">/{data?.stats?.total?.hard || 0}</span></span>
                   </div>
                 </div>
               </div>
@@ -209,17 +209,17 @@ export function LeetCodePanel() {
               <div className="flex-1 flex flex-col justify-between border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
                 <div className="flex justify-between items-start mb-4">
                   <span className="text-xs text-white/50 font-medium">Badges</span>
-                  <span className="text-xl font-bold text-white leading-none">{data.badges.length}</span>
+                  <span className="text-xl font-bold text-white leading-none">{data?.badges?.length || 0}</span>
                 </div>
                 <div className="flex gap-2 items-end">
-                  {data.badges.slice(0, 3).map((badge, idx) => (
+                  {(data?.badges || []).slice(0, 3).map((badge, idx) => (
                     <div key={badge.id} className="relative group flex items-center justify-center">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={badge.icon} alt={badge.displayName} className={`w-14 h-14 md:w-16 md:h-16 object-contain drop-shadow-md ${idx === 0 ? 'scale-110 z-10' : 'opacity-80 grayscale-[20%]'}`} />
                     </div>
                   ))}
                 </div>
-                {data.badges.length > 0 && (
+                {data?.badges && data.badges.length > 0 && (
                   <div className="mt-4 flex flex-col">
                     <span className="text-[10px] text-white/40 uppercase tracking-wider">Most Recent</span>
                     <span className="text-sm text-white/90 font-medium truncate">{data.badges[0].displayName}</span>
@@ -231,13 +231,13 @@ export function LeetCodePanel() {
               <div className="flex-1 flex flex-col justify-between">
                 <div className="flex justify-between items-start mb-4">
                   <span className="text-xs text-white/50 font-medium flex items-center gap-2"><Trophy className="w-3 h-3 text-yellow-500" /> Contest Rating</span>
-                  {data.contest && (
-                    <span className="text-sm font-bold text-green-400 bg-green-400/10 px-2 py-0.5 rounded">Top {data.contest.topPercentage}%</span>
+                  {data?.contest && (
+                    <span className="text-sm font-bold text-green-400 bg-green-400/10 px-2 py-0.5 rounded">Top {data?.contest?.topPercentage}%</span>
                   )}
                 </div>
                 <div className="flex flex-col gap-1">
-                  <span className="text-3xl font-black text-white tracking-tight">{data.contest?.rating || 'N/A'}</span>
-                  <span className="text-xs text-white/50">Global Ranking: <strong className="text-white/80">{data.contest?.globalRanking?.toLocaleString() || 'N/A'}</strong></span>
+                  <span className="text-3xl font-black text-white tracking-tight">{data?.contest?.rating || 'N/A'}</span>
+                  <span className="text-xs text-white/50">Global Ranking: <strong className="text-white/80">{data?.contest?.globalRanking?.toLocaleString() || 'N/A'}</strong></span>
                 </div>
               </div>
 

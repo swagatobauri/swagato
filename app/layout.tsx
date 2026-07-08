@@ -49,7 +49,7 @@ export default function RootLayout({
           `
         }} />
       </head>
-      <body className={`${syne.variable} ${plusJakartaSans.variable} ${geistMono.variable}`}>
+      <body className={`${syne.variable} ${plusJakartaSans.variable} ${geistMono.variable} overflow-x-hidden`}>
         <div className="flex w-full min-h-screen">
           <Sidebar />
           <main className="flex-1 flex flex-col min-w-0 relative">

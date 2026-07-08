@@ -66,17 +66,17 @@ export function ProjectsSection() {
               <Link 
                 href={`/projects/${project.id}`} 
                 key={project.id} 
-                className={`snap-start shrink-0 w-[85vw] md:w-[600px] h-[400px] md:h-[450px] ${bgStyle} rounded-[32px] p-8 md:p-12 flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-purple-900/10 cursor-pointer`}
+                className={`snap-start shrink-0 w-[85vw] sm:w-[70vw] md:w-[500px] h-[360px] md:h-[450px] ${bgStyle} rounded-[28px] md:rounded-[32px] p-6 md:p-10 flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-purple-900/10 cursor-pointer`}
               >
                 <div className="bg-white/20 text-white font-mono text-xs uppercase tracking-widest px-4 py-2 rounded-full self-start backdrop-blur-md font-bold">
                   {project.status}
                 </div>
                 
                 <div className="flex flex-col gap-2 md:gap-4 mt-auto">
-                  <h3 className="text-4xl md:text-5xl font-heading font-black text-white leading-[1.1] tracking-tight drop-shadow-sm group-hover:scale-[1.02] transform origin-left transition-transform duration-300">
+                  <h3 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-white leading-[1.1] tracking-tight drop-shadow-sm group-hover:scale-[1.02] transform origin-left transition-transform duration-300 break-words">
                     {project.title}
                   </h3>
-                  <p className="text-white/80 text-lg md:text-xl font-medium max-w-[90%] leading-relaxed drop-shadow-sm">
+                  <p className="text-white/80 text-base sm:text-lg md:text-xl font-medium max-w-full md:max-w-[90%] leading-relaxed drop-shadow-sm line-clamp-3">
                     {project.subtitle}
                   </p>
                 </div>

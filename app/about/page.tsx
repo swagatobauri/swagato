@@ -89,13 +89,13 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-bodyLg font-medium text-foreground/80 leading-relaxed">
             <p>
-              I am a software engineer who builds high-performance RAG systems and full-stack applications. I like my code like I like my coffee: fast, robust, and completely free of boilerplate.
+              I am a software engineer who turns caffeine, chaos, and a healthy dose of late-night existential dread into high-performance AI agents and scalable backends. I thrive in the deep end of the tech stack, building systems that don&apos;t just survive contact with reality—they dominate it.
             </p>
             <p>
-              Most of my time is spent obsessing over latency, optimizing LLM inference pipelines, and arguing with the borrow checker. When I am not writing code, I am usually deleting it. I believe less is more—especially when it comes to bundle size and server costs.
+              Most of my day is spent orchestrating LLM pipelines, shipping chaotic pull requests to CNCF open-source projects, and aggressively optimizing algorithmic complexities just to feel alive. When I&apos;m not gaslighting my compiler or arguing with edge cases in a graph traversal, I&apos;m deleting boilerplate. I believe the best architectures are forged in the fires of production.
             </p>
             <p>
-              I do not just build MVP prototypes that fall over under load. I design systems with SOLID architecture that are meant to be scaled, maintained, and shipped to production. If you are building something hard, we should talk.
+              I don&apos;t build fragile prototypes held together by duct tape and hope. I engineer resilient, deterministic systems designed to scale cleanly and handle anomalies before they become 3 AM pager alerts. If you are building something absurdly ambitious, we should talk.
             </p>
           </div>
           
@@ -114,12 +114,11 @@ export default function AboutPage() {
             <div className="quote-card absolute top-24 left-12 w-64 p-8 bg-background border border-border shadow-2xl flex flex-col gap-4 transform -rotate-6">
               {/* Tape visual */}
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-white/40 backdrop-blur-md border border-white/20 shadow-sm rotate-2 opacity-80" />
-              <p className="font-heading text-bodyLg italic text-foreground leading-snug">
-                "The most reliable code is the code you never write."
-              </p>
+              <p className="font-mono text-bodyLg text-foreground leading-snug tracking-tight">
+                {':(){ :|:& };:'}</p>
               <div className="mt-2 h-px w-8 bg-border" />
               <span className="font-mono text-caption text-muted uppercase tracking-widest">
-                — A running joke
+                — MY SOLUTION TO LOAD BALANCING
               </span>
             </div>
 
@@ -127,11 +126,11 @@ export default function AboutPage() {
             <div className="quote-card absolute bottom-32 right-12 w-72 p-8 bg-muted/30 backdrop-blur-md border border-border shadow-xl flex flex-col gap-4 transform rotate-6">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/40 backdrop-blur-md border border-white/20 shadow-sm -rotate-3 opacity-80" />
               <p className="font-heading text-bodyLg italic text-foreground leading-snug">
-                "It works on my machine."
+                &quot;Chaos Engineering is just a highly respectable way to say &apos;I broke the cluster on purpose.&apos;&quot;
               </p>
               <div className="mt-2 h-px w-8 bg-border" />
               <span className="font-mono text-caption text-muted uppercase tracking-widest">
-                — Famous last words
+                — CNCF APPROVED BEHAVIOR
               </span>
             </div>
 

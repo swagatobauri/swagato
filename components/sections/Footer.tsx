@@ -109,8 +109,8 @@ export function Footer() {
 
           {/* Massive Wordmark (HTML text for fluid viewport scaling without SVG clipping) */}
           <div className="w-full pb-2 flex justify-start overflow-hidden">
-            <h1 className="massive-wordmark text-[16vw] leading-[0.75] font-heading font-black tracking-tighter text-foreground whitespace-nowrap -ml-[0vw]">
-              swag<span className="text-accent">.</span>
+            <h1 className="massive-wordmark text-[16vw] leading-[0.75] font-heading font-black tracking-tighter text-accent whitespace-nowrap -ml-[0vw]">
+              swag<span>.</span>
             </h1>
           </div>
         </div>

@@ -3,7 +3,27 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ExternalLink } from 'lucide-react';
 import { timelineData } from '@/lib/experience-data';
+
+const LinkedinIcon = ({ size = 16, className = "" }: { size?: number, className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect width="4" height="12" x="2" y="9" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
 
 export function ExperienceSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -94,10 +114,24 @@ export function ExperienceSection() {
               <h3 className="text-h3 font-heading font-bold text-foreground mb-1 leading-tight">
                 {item.role}
               </h3>
-              <div className="font-heading font-semibold text-bodyBase text-foreground/80 mb-4">
-                {item.organization}
+              <div className="font-heading font-semibold text-bodyBase text-foreground/80 mb-4 flex items-center gap-3">
+                <span>{item.organization}</span>
+                {item.links && (
+                  <div className="flex items-center gap-2">
+                    {item.links.website && (
+                      <a href={item.links.website} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent transition-colors duration-300" aria-label={`${item.organization} Website`}>
+                        <ExternalLink size={16} />
+                      </a>
+                    )}
+                    {item.links.linkedin && (
+                      <a href={item.links.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-accent transition-colors duration-300" aria-label={`${item.organization} LinkedIn`}>
+                        <LinkedinIcon size={16} />
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
-              <p className="font-heading font-normal text-bodyBase text-muted leading-relaxed max-w-xl">
+              <p className="font-heading font-normal text-bodyBase text-muted leading-relaxed max-w-xl whitespace-pre-line">
                 {item.description}
               </p>
             </div>

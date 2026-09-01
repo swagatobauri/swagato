@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { MENU_GROUPS } from '@/lib/nav-links-data';
+import { MENU_GROUPS, RESUME_LINK } from '@/lib/nav-links-data';
 import { 
   Home, 
   User, 
@@ -148,11 +148,6 @@ export function Sidebar() {
       <nav className="flex-1 py-6 flex flex-col gap-8">
         
         {MENU_GROUPS.map((group) => {
-          // Identify if this is the "Connect" group which holds the Resume
-          const isConnectGroup = group.title === 'Connect';
-          const regularItems = isConnectGroup ? group.items.filter(i => i.id !== 'resume') : group.items;
-          const resumeItem = isConnectGroup ? group.items.find(i => i.id === 'resume') : null;
-
           return (
             <div key={group.title} className="flex flex-col px-4">
               
@@ -164,7 +159,7 @@ export function Sidebar() {
               </h3>
               
               <ul className="flex flex-col gap-1">
-                {regularItems.map((item) => {
+                {group.items.map((item) => {
                   const isActive = pathname === item.href;
                   const Icon = item.iconName && ICON_MAP[item.iconName] ? ICON_MAP[item.iconName] : Circle;
 
@@ -231,38 +226,36 @@ export function Sidebar() {
                 })}
               </ul>
 
-              {/* Pinned Resume (only in Connect group) */}
-              {resumeItem && (
-                <div className="mt-4 pt-4 border-t border-border/50">
-                   <a 
-                      href={resumeItem.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() => setIsMobileOpen(false)}
-                      className={clsx(
-                        "group flex items-center rounded-sm px-2 py-2 transition-colors duration-200 text-foreground/80 hover:text-foreground hover:bg-accent/10",
-                        isCollapsed ? "justify-center" : "justify-between"
-                      )}
-                      title={resumeItem.label}
-                    >
-                      <div className="flex items-center gap-3">
-                        <FileText className="w-4 h-4 text-accent" />
-                        {!isCollapsed && (
-                          <span className="font-heading text-bodySm font-bold">
-                            {resumeItem.label}
-                          </span>
-                        )}
-                      </div>
-                      {!isCollapsed && (
-                        <ArrowUpRight className="w-3 h-3 text-muted group-hover:text-accent transition-colors" />
-                      )}
-                  </a>
-                </div>
-              )}
-
             </div>
           )
         })}
+
+        {/* Pinned Resume (Rendered separately at the bottom) */}
+        <div className="mt-auto pt-4 border-t border-border/50 px-4 pb-2">
+           <a 
+              href={RESUME_LINK.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileOpen(false)}
+              className={clsx(
+                "group flex items-center rounded-sm px-2 py-2 transition-colors duration-200 text-foreground/80 hover:text-foreground hover:bg-accent/10",
+                isCollapsed ? "justify-center" : "justify-between"
+              )}
+              title={RESUME_LINK.label}
+            >
+              <div className="flex items-center gap-3">
+                <FileText className="w-4 h-4 text-accent" />
+                {!isCollapsed && (
+                  <span className="font-heading text-bodySm font-bold">
+                    {RESUME_LINK.label}
+                  </span>
+                )}
+              </div>
+              {!isCollapsed && (
+                <ArrowUpRight className="w-3 h-3 text-muted group-hover:text-accent transition-colors" />
+              )}
+          </a>
+        </div>
       </nav>
 
     </aside>

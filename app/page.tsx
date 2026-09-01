@@ -6,6 +6,7 @@ const ProjectsSection = dynamic(() => import('@/components/sections/Projects').t
 const Footer = dynamic(() => import('@/components/sections/Footer').then(mod => mod.Footer));
 const StackCard = dynamic(() => import('@/components/sections/StackCard').then(mod => mod.StackCard));
 const LeetCodePanel = dynamic(() => import('@/components/sections/LeetCodePanel').then(mod => mod.LeetCodePanel), { ssr: false });
+const SocialBento = dynamic(() => import('@/components/sections/SocialBento').then(mod => mod.SocialBento), { ssr: false });
 
 export default function Home() {
   return (
@@ -16,9 +17,7 @@ export default function Home() {
       <section className="w-full max-w-[1400px] mx-auto pt-16 pb-8 px-gutter">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <StackCard />
-          <div className="w-full min-h-[400px] border border-dashed border-border rounded-3xl flex items-center justify-center bg-muted/5 text-muted font-mono text-bodySm p-8 text-center">
-            [Recent Posts Panel Pending]
-          </div>
+          <SocialBento />
         </div>
       </section>
 

@@ -25,10 +25,10 @@ export const SERVICES: Service[] = [
     abbr: 'SA',
     title: 'SaaS Development',
     subtitle: 'SaaS • Web App • Scaling',
-    shortDescription: 'Crafting scalable SaaS platforms with cutting-edge features, ensuring seamless performance and an exceptional user experience.',
+    shortDescription: 'Architecting high-throughput, multi-tenant SaaS platforms engineered for rapid scaling and uncompromising performance.',
     detailedDescription: [
-      "I specialize in building scalable SaaS platforms that combine advanced features with seamless performance and intuitive user experiences. From architecture to deployment, I ensure your product is robust, secure, and ready for growth, helping you deliver value to users and stand out in a competitive market.",
-      "By utilizing modern tech stacks and cloud infrastructure, I build multi-tenant platforms capable of handling high traffic and complex workflows without compromising speed."
+      "I engineer complex, distributed SaaS architectures that prioritize data integrity and minimal latency. From the database schema to the CDN edge, every layer is optimized for ruthless efficiency.",
+      "I do not build fragile MVPs. I construct production-grade platforms with robust authentication, scalable billing pipelines, and zero-downtime deployment strategies."
     ],
     features: [
       'End-to-end SaaS product development',
@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
       'Cross-platform (web & mobile) delivery'
     ],
     moreCount: 3,
-    price: '$1000',
+    price: '$500',
     isCustomQuote: false,
     bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20SaaS%20Development',
     featured: true,
@@ -59,10 +59,10 @@ export const SERVICES: Service[] = [
     abbr: 'WEB',
     title: 'Custom Website Development',
     subtitle: 'Responsive • Performant • Modern',
-    shortDescription: 'Building fast, responsive single and multi-page web applications tailored to your business needs, with modern design and robust performance.',
+    shortDescription: 'Engineering hyper-optimized, visually brutalist web experiences that dominate Core Web Vitals and maximize conversion.',
     detailedDescription: [
-      "Your website is your digital storefront. I build custom, high-performance websites that not only look stunning but are engineered to convert visitors into customers.",
-      "Using the latest web technologies like Next.js and Tailwind CSS, I ensure your site has lightning-fast load times, perfect SEO scores, and flawless mobile responsiveness."
+      "I build web applications that load in milliseconds and execute flawlessly. Forget bloated templates; I write clean, deterministic code tailored for absolute performance.",
+      "Leveraging cutting-edge rendering strategies and minimal client-side JavaScript, I ensure perfect SEO scores and instant interactivity across all devices."
     ],
     features: [
       'Custom-built SPA/MPA',
@@ -72,7 +72,7 @@ export const SERVICES: Service[] = [
       'CMS Integration'
     ],
     moreCount: 1,
-    price: '$200',
+    price: '$100',
     isCustomQuote: false,
     bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20Custom%20Website',
     featured: true,
@@ -92,10 +92,10 @@ export const SERVICES: Service[] = [
     abbr: 'SYS',
     title: 'System Design',
     subtitle: 'Architecture • Scalability • Cloud',
-    shortDescription: 'Designing robust, scalable system architectures and user flows that power reliable, high-performing applications.',
+    shortDescription: 'Architecting fault-tolerant, horizontally scalable backend systems capable of absorbing massive traffic spikes.',
     detailedDescription: [
-      "A great application requires a solid foundation. I design scalable, cloud-native system architectures that handle high concurrency, data integrity, and complex microservice orchestration.",
-      "From database schema design to event-driven architectures, I map out the technical blueprint required to ensure your application can scale securely and efficiently."
+      "I design distributed systems that refuse to fail. By applying advanced microservice patterns and rigorous database modeling, I eliminate single points of failure.",
+      "Whether it is an event-driven pipeline or a heavily partitioned relational cluster, I map out technical blueprints that scale cleanly without accumulating technical debt."
     ],
     features: [
       'Scalable system architecture',
@@ -105,7 +105,7 @@ export const SERVICES: Service[] = [
       'API Gateway & Microservices'
     ],
     moreCount: 2,
-    price: '$500',
+    price: '$250',
     isCustomQuote: false,
     bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20System%20Design',
     featured: true,
@@ -125,10 +125,10 @@ export const SERVICES: Service[] = [
     abbr: 'PA',
     title: 'Payment Gateway Integration',
     subtitle: 'Stripe • Razorpay • Subscriptions',
-    shortDescription: 'Integrating secure and reliable payment gateways like Stripe and Razorpay into websites and web applications.',
+    shortDescription: 'Architecting bulletproof, PCI-compliant payment infrastructures that maximize conversion and eliminate revenue leakage.',
     detailedDescription: [
-      "Stop losing revenue to failed transactions. I implement robust, secure, and PCI-compliant payment gateways into your existing web applications.",
-      "Whether you need simple one-time checkouts, complex recurring billing cycles, or global multi-currency support, I ensure the checkout flow is frictionless for your customers."
+      "I engineer frictionless, deeply integrated payment pipelines. From idempotency keys to complex webhook validation, I ensure your transactions are mathematically secure and immune to network partitions.",
+      "Whether deploying high-volume subscription models or multi-currency routing, I build resilient billing logic that operates silently and flawlessly."
     ],
     features: [
       'Stripe and Razorpay integration',
@@ -138,7 +138,7 @@ export const SERVICES: Service[] = [
       'Failed payment recovery logic'
     ],
     moreCount: 4,
-    price: '$300',
+    price: '$150',
     isCustomQuote: false,
     bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20Payment%20Gateway',
     featured: false,
@@ -154,10 +154,10 @@ export const SERVICES: Service[] = [
     abbr: 'LPD',
     title: 'Landing Page Design',
     subtitle: 'Conversion • UI/UX • Design Laws',
-    shortDescription: 'Designing landing pages that combine design laws, current trends, and conversion-focused strategies to maximize engagement.',
+    shortDescription: 'Engineering highly-optimized, psychologically driven landing pages engineered strictly for aggressive conversion.',
     detailedDescription: [
-      "A beautiful page isn't enough; it needs to convert. I design high-converting landing pages using established design principles (Fitts's Law, Hick's Law) and persuasive visual hierarchies.",
-      "By combining modern UI trends with proven psychological design laws, I craft pages that guide user attention directly to your primary call-to-action."
+      "Aesthetics are secondary to performance. I deploy brutalist UX principles and cognitive design laws (Fitts's Law, Hick's Law) to ruthlessly eliminate friction and guide user behavior.",
+      "Every pixel is intentional. I craft interfaces that do not just look modern—they systematically convert traffic into revenue."
     ],
     features: [
       'Conversion-optimized layouts',
@@ -166,7 +166,7 @@ export const SERVICES: Service[] = [
       'A/B Testing setup ready'
     ],
     moreCount: 2,
-    price: '$100',
+    price: '$50',
     isCustomQuote: false,
     bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20Landing%20Page',
     featured: false,
@@ -182,10 +182,10 @@ export const SERVICES: Service[] = [
     abbr: 'AI',
     title: 'AI Tool Development',
     subtitle: 'LLMs • RAG • Custom Models',
-    shortDescription: 'Building AI/ML-powered SaaS products, specializing in training custom models and prompt engineering.',
+    shortDescription: 'Deploying robust, deterministic AI microservices and scalable LLM architectures for enterprise workflows.',
     detailedDescription: [
-      "Leverage the power of Artificial Intelligence to automate workflows and unlock new capabilities. I build custom AI tools, ranging from internal automation scripts to full-fledged AI SaaS products.",
-      "Specializing in RAG (Retrieval-Augmented Generation) pipelines, I can securely connect state-of-the-art LLMs (like GPT-4 or Claude 3) to your proprietary business data."
+      "I build hardened AI systems that survive outside the Jupyter notebook. From orchestrating complex agentic workflows to deploying custom inference servers, I turn stochastic models into reliable utilities.",
+      "Specializing in heavily optimized RAG architectures and vector similarity search, I securely expose your proprietary data to state-of-the-art LLMs without compromising privacy."
     ],
     features: [
       'Custom AI/ML model training',
@@ -194,7 +194,7 @@ export const SERVICES: Service[] = [
       'Vector Database integration'
     ],
     moreCount: 2,
-    price: '$3000',
+    price: '$800',
     isCustomQuote: false,
     bookLink: 'mailto:hello@swagato.com?subject=Inquiry:%20AI%20Tool',
     featured: false,

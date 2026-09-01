@@ -38,7 +38,7 @@ export default function RoleDetailPage({ params }: { params: { role: string } })
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-background/40 blur-3xl rounded-full" />
           <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-accent/20 blur-3xl rounded-full" />
           
-          <h1 className="relative z-10 font-heading text-4xl md:text-[4rem] font-black text-foreground tracking-tight leading-tight text-center px-6">
+          <h1 className="relative z-10 font-heading text-4xl md:text-[3.5rem] font-bold text-foreground tracking-tight leading-tight text-center px-6">
             {roleData.name}
           </h1>
         </div>
@@ -51,7 +51,7 @@ export default function RoleDetailPage({ params }: { params: { role: string } })
             
             {/* Tagline & Description */}
             <section className="flex flex-col gap-4 md:gap-6">
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-h2 font-bold text-foreground leading-tight">
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-[1.1] tracking-tight">
                 {roleData.tagline}
               </h2>
               <p className="text-base sm:text-lg md:text-bodyLg text-foreground/80 leading-relaxed max-w-3xl">
@@ -62,9 +62,6 @@ export default function RoleDetailPage({ params }: { params: { role: string } })
             {/* What's Included Checklist */}
             <section className="flex flex-col gap-8">
               <h3 className="font-heading text-h4 font-bold text-foreground flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                  ✨
-                </span>
                 What&apos;s Included
               </h3>
               
@@ -116,13 +113,13 @@ export default function RoleDetailPage({ params }: { params: { role: string } })
               <div className="flex flex-col gap-4 pt-6 border-t border-border">
                 <a 
                   href={`mailto:swagato731123@gmail.com?subject=Inquiry: ${roleData.name}`}
-                  className="w-full py-4 bg-foreground text-background font-bold text-bodySm rounded-sm flex items-center justify-center gap-2 hover:bg-accent hover:text-foreground transition-colors"
+                  className="w-full py-4 bg-foreground text-background font-bold text-bodySm rounded-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
                 >
                   <Mail className="w-4 h-4" />
                   Start a Conversation
                 </a>
                 <p className="text-caption text-muted-foreground text-center">
-                  Typically replies within 24 hours.
+                  Typically replies within 4 hours (unless a production database just dropped, then please send coffee).
                 </p>
               </div>
 

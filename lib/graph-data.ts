@@ -37,6 +37,7 @@ export const TECH_NODES: TechNode[] = [
   { id: 'faiss', group: 'rag', label: 'FAISS', context: 'High-dimensional semantic vector search' },
   { id: 'ragas', group: 'rag', label: 'RAGAS', context: 'Automated retrieval evaluation' },
   { id: 'openai', group: 'rag', label: 'OpenAI', context: 'Embedding models and fallback generation' },
+  { id: 'awsbedrock', group: 'rag', label: 'AWS Bedrock', context: 'Serverless foundation models' },
   { id: 'redis', group: 'rag', label: 'Redis', context: 'Vector caching and session state', iconPath: siRedis.path, iconHex: `#${siRedis.hex}` },
 
   // Backend & Core Cluster
@@ -63,6 +64,11 @@ export const TECH_NODES: TechNode[] = [
 
   // DevOps Cluster
   { id: 'docker', group: 'devops', label: 'Docker', context: 'Containerization', iconPath: siDocker.path, iconHex: `#${siDocker.hex}` },
+  { id: 'kubernetes', group: 'devops', label: 'Kubernetes', context: 'Container orchestration' },
+  { id: 'terraform', group: 'devops', label: 'Terraform', context: 'Infrastructure as Code' },
+  { id: 'awslambda', group: 'devops', label: 'AWS Lambda', context: 'Serverless compute' },
+  { id: 'eventbridge', group: 'devops', label: 'EventBridge', context: 'Event-driven serverless router' },
+  { id: 'celery', group: 'backend', label: 'Celery', context: 'Distributed task queue' },
   { id: 'ghactions', group: 'devops', label: 'GitHub Actions', context: 'CI/CD automation', iconPath: siGithubactions.path, iconHex: `#${siGithubactions.hex}` },
   { id: 'vercel', group: 'devops', label: 'Vercel', context: 'Edge deployment', iconPath: siVercel.path }, // omitted hex
 ];
@@ -77,6 +83,7 @@ export const TECH_LINKS: TechLink[] = [
   { source: 'langchain', target: 'groq' },
   { source: 'langchain', target: 'openai' },
   { source: 'langchain', target: 'faiss' },
+  { source: 'langgraph', target: 'awsbedrock' },
   { source: 'python', target: 'ragas' },
   { source: 'python', target: 'redis' },
   { source: 'ragas', target: 'openai' },
@@ -91,6 +98,10 @@ export const TECH_LINKS: TechLink[] = [
   { source: 'node', target: 'redis' },
   { source: 'sql', target: 'pg' },
   { source: 'sql', target: 'mysql' },
+  { source: 'python', target: 'fastapi' },
+  { source: 'python', target: 'flask' },
+  { source: 'fastapi', target: 'celery' },
+  { source: 'redis', target: 'celery' },
   
   // Core Connections
   { source: 'cpp', target: 'python' },
@@ -106,6 +117,10 @@ export const TECH_LINKS: TechLink[] = [
   // DevOps Connections
   { source: 'docker', target: 'node' },
   { source: 'docker', target: 'python' },
+  { source: 'docker', target: 'kubernetes' },
+  { source: 'terraform', target: 'kubernetes' },
+  { source: 'terraform', target: 'awslambda' },
+  { source: 'awslambda', target: 'eventbridge' },
   { source: 'next', target: 'vercel' },
 
   // Cross-cluster bridges

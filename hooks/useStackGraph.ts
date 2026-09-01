@@ -43,10 +43,10 @@ export function useStackGraph({ initialNodes, initialLinks, width, height, enabl
     linksRef.current = initialLinks.map(d => ({ ...d }));
 
     const simulation = d3.forceSimulation<TechNode>(nodesRef.current)
-      .force('link', d3.forceLink<TechNode, TechLink>(linksRef.current).id(d => d.id).distance(140))
-      .force('charge', d3.forceManyBody().strength(-400))
+      .force('link', d3.forceLink<TechNode, TechLink>(linksRef.current).id(d => d.id).distance(220))
+      .force('charge', d3.forceManyBody().strength(-1200))
       .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collide', d3.forceCollide().radius(60))
+      .force('collide', d3.forceCollide().radius(90))
       .alphaDecay(0.02) // Slower decay = longer gentle movement
       .velocityDecay(0.4); // More drag = less bouncy, more restrained
 

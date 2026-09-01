@@ -28,7 +28,7 @@ export default function HireMePage() {
               href={`/hire-me/${role.slug}`}
               className="group flex flex-col p-8 bg-card border border-border rounded-2xl hover:bg-accent/5 hover:border-accent/20 transition-all duration-300"
             >
-              <h3 className="font-heading text-h3 font-bold text-foreground mb-4 group-hover:text-accent transition-colors">
+              <h3 className="font-heading text-h4 leading-tight tracking-tight font-bold text-foreground mb-4 group-hover:text-accent transition-colors break-words">
                 {role.name}
               </h3>
               <p className="text-bodySm text-foreground/70 mb-8 min-h-[40px]">

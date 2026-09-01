@@ -147,7 +147,7 @@ export function Sidebar() {
       {/* 2 & 3. Nav Groups */}
       <nav className="flex-1 py-6 flex flex-col gap-8">
         
-        {MENU_GROUPS.map((group) => {
+        {MENU_GROUPS.filter(group => group.title !== 'Connect').map((group) => {
           return (
             <div key={group.title} className="flex flex-col px-4">
               

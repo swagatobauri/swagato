@@ -30,6 +30,16 @@ export const MENU_GROUPS: NavGroup[] = [
       { id: 'stack', label: 'Stack', href: '/tech-stack', isExternal: false, iconName: 'Layers' },
     ]
   },
+  {
+    title: 'Connect',
+    items: [
+      { id: 'github', label: 'GitHub', href: 'https://github.com/swagatobauri', isExternal: true, iconName: 'Code2' },
+      { id: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/swagatobauri/', isExternal: true, iconName: 'Globe' },
+      { id: 'leetcode', label: 'LeetCode', href: 'https://leetcode.com/u/swagatobauri/', isExternal: true, iconName: 'Code' },
+      { id: 'email', label: 'Email', href: 'mailto:swagato731123@gmail.com', isExternal: true, iconName: 'Mail' },
+      { id: 'resume', label: 'Resume', href: 'https://my.newtonschool.co/template/user/swagato731123/resume/', isExternal: true, iconName: 'FileText' },
+    ]
+  }
 ];
 
 export const RESUME_LINK: NavItem = {
